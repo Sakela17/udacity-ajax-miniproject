@@ -19,6 +19,12 @@ function loadData() {
 
     $greeting.text("So, you want to live at " + address + "?");
 
+    // NYTimes AJAX request
+    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    $.getJSON(url, function(data){
+        console.log(data);
+    });
+
     return false;
 }
 
